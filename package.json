@@ -11,9 +11,14 @@
     "@testing-library/react": "^16.3.0",
     "@testing-library/user-event": "^13.5.0",
     "firebase": "^11.10.0",
+    "framer-motion": "^12.23.0",
+    "i18next": "^25.3.1",
     "lucide-react": "^0.525.0",
     "react": "^19.1.0",
     "react-dom": "^19.1.0",
+    "react-google-button": "^0.8.0",
+    "react-hot-toast": "^2.5.2",
+    "react-i18next": "^15.6.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4"
   },
@@ -43,6 +48,8 @@
     ]
   },
   "devDependencies": {
-    "@types/node": "^24.0.10"
+    "@types/node": "^24.0.10",
+    "autoprefixer": "^10.4.21",
+    "postcss": "^8.5.6"
   }
 }

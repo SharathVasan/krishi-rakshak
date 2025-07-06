@@ -1,0 +1,57 @@
+.spinner-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spinner {
+  border-radius: 50%;
+  border: 3px solid rgba(255, 255, 255, 0.2);
+  border-top: 3px solid currentColor;
+}
+
+/* Sizes */
+.spinner--small {
+  width: 20px;
+  height: 20px;
+  border-width: 2px;
+}
+
+.spinner--medium {
+  width: 40px;
+  height: 40px;
+  border-width: 3px;
+}
+
+.spinner--large {
+  width: 60px;
+  height: 60px;
+  border-width: 4px;
+}
+
+.spinner--extra-large {
+  width: 80px;
+  height: 80px;
+  border-width: 5px;
+}
+
+/* Colors */
+.spinner--white {
+  color: white;
+}
+
+.spinner--primary {
+  color: #667eea;
+}
+
+.spinner--success {
+  color: #56ab2f;
+}
+
+.spinner--danger {
+  color: #ff416c;
+}
+
+.spinner--warning {
+  color: #f093fb;
+}

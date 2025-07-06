@@ -13,7 +13,7 @@ class GeminiService {
 
   async testConnection() {
     try {
-      const model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       const result = await model.generateContent(
         "Say hello in a creative way!"
       );
@@ -21,13 +21,13 @@ class GeminiService {
       return result.response.text();
     } catch (error) {
       console.error("❌ Gemini API error:", error);
-      return null;
+      return `API Error: ${error.message}`;
     }
   }
 
   async diagnoseCrop(imageBase64, farmerQuery = "", language = "en") {
     try {
-      const model = this.genAI.getGenerativeModel({ model: "gemini-pro-vision" });
+      const model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       
       const languageInstructions = {
         'kn': 'Respond in simple Kannada language',
@@ -80,7 +80,7 @@ class GeminiService {
 
   async getMarketAdvice(location, crop, currentPrice = null, language = "en") {
     try {
-      const model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       
       const languageInstructions = {
         'kn': 'Respond in simple Kannada language',
@@ -120,7 +120,7 @@ class GeminiService {
 
   async getSchemeRecommendations(farmerProfile, language = "en") {
     try {
-      const model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       
       const languageInstructions = {
         'kn': 'Respond in simple Kannada language',
@@ -166,7 +166,7 @@ class GeminiService {
 
   async processVoiceQuery(transcript, context = {}, language = "en") {
     try {
-      const model = this.genAI.getGenerativeModel({ model: "gemini-pro" });
+      const model = this.genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
       
       const languageInstructions = {
         'kn': 'Respond in simple Kannada language',

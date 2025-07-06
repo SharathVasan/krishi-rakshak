@@ -1,0 +1,102 @@
+{
+  "app": {
+    "title": "Krishi Rakshak",
+    "subtitle": "Your AI Farming Companion",
+    "description": "AI-powered crop diagnosis, market insights, and government scheme guidance"
+  },
+  "auth": {
+    "signIn": "Sign In with Google",
+    "signOut": "Sign Out",
+    "welcome": "Welcome back",
+    "profile": "Profile",
+    "loading": "Signing in..."
+  },
+  "navigation": {
+    "diagnosis": "Crop Diagnosis",
+    "market": "Market Prices",
+    "schemes": "Govt Schemes",
+    "profile": "Profile"
+  },
+  "language": {
+    "select": "Select Language",
+    "english": "English",
+    "kannada": "ಕನ್ನಡ",
+    "hindi": "हिंदी"
+  },
+  "voice": {
+    "title": "Voice Input",
+    "startRecording": "Start Recording",
+    "stopRecording": "Stop Recording",
+    "playback": "Play Recording",
+    "transcribe": "Transcribe",
+    "recordingStatus": "Recording in {{language}}...",
+    "askQuestion": "Ask your farming question",
+    "placeholder": "Or type your question here..."
+  },
+  "cropDiagnosis": {
+    "title": "Crop Diagnosis",
+    "takePhoto": "Take Photo",
+    "uploadPhoto": "Upload Photo",
+    "retakePhoto": "Retake Photo",
+    "analyze": "Analyze Crop",
+    "analyzing": "Analyzing your crop...",
+    "results": "Diagnosis Results",
+    "noImage": "Please take or upload a photo of your crop",
+    "cameraPermission": "Camera access required for taking photos",
+    "analysisError": "Sorry, couldn't analyze the image. Please try again."
+  },
+  "market": {
+    "title": "Market Intelligence",
+    "getAnalysis": "Get Market Analysis",
+    "priceAlert": "Price Alert",
+    "trends": "Market Trends",
+    "bestTime": "Best Time to Sell",
+    "nearbyMarkets": "Nearby Markets"
+  },
+  "schemes": {
+    "title": "Government Schemes",
+    "findSchemes": "Find Eligible Schemes",
+    "apply": "Apply Now",
+    "eligibility": "Check Eligibility",
+    "documents": "Required Documents",
+    "deadline": "Application Deadline"
+  },
+  "profile": {
+    "title": "Farmer Profile",
+    "name": "Name",
+    "location": "Location",
+    "farmSize": "Farm Size",
+    "crops": "Crops Grown",
+    "experience": "Farming Experience",
+    "language": "Preferred Language",
+    "save": "Save Profile",
+    "edit": "Edit Profile"
+  },
+  "common": {
+    "save": "Save",
+    "cancel": "Cancel",
+    "edit": "Edit",
+    "delete": "Delete",
+    "loading": "Loading...",
+    "error": "Error occurred",
+    "success": "Success",
+    "retry": "Retry",
+    "close": "Close"
+  },
+  "farmSize": {
+    "small": "Small Scale (< 2 acres)",
+    "medium": "Medium Scale (2-10 acres)",
+    "large": "Large Scale (> 10 acres)"
+  },
+  "crops": {
+    "rice": "Rice",
+    "wheat": "Wheat",
+    "maize": "Maize",
+    "tomato": "Tomato",
+    "onion": "Onion",
+    "potato": "Potato",
+    "sugarcane": "Sugarcane",
+    "cotton": "Cotton",
+    "mixed": "Mixed Crops"
+  }
+}
