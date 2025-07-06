@@ -1,38 +1,325 @@
 .App {
   text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+  min-height: 100vh;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
 }
 
 .App-header {
-  background-color: #282c34;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  padding: 20px;
+  color: white;
   min-height: 100vh;
+}
+
+.App h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.5em;
+  text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+.App p {
+  margin: 0 0 30px 0;
+  font-size: 1.2em;
+  opacity: 0.9;
+}
+
+/* Language Selector */
+.language-selector {
+  margin-bottom: 20px;
+}
+
+.language-select {
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  font-size: 16px;
+  background: white;
+  color: #333;
+  cursor: pointer;
+}
+
+/* Navigation Tabs */
+.nav-tabs {
   display: flex;
-  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.tab-btn {
+  padding: 12px 20px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-size: 14px;
+  backdrop-filter: blur(10px);
+}
+
+.tab-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  transform: translateY(-2px);
+}
+
+.tab-btn.active {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+}
+
+/* Tab Content */
+.tab-content {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Voice Recorder Styles */
+.voice-recorder {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  margin-bottom: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.recording-controls {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.record-btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 50px;
+  background: #ff6b6b;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.record-btn:hover {
+  background: #ff5252;
+  transform: scale(1.05);
+}
+
+.record-btn.recording {
+  background: #4ecdc4;
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+  100% { transform: scale(1); }
+}
+
+.play-btn, .transcribe-btn {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 25px;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.play-btn:hover, .transcribe-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Crop Diagnosis Styles */
+.crop-diagnosis {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+}
+
+.capture-options {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  margin: 20px 0;
+  flex-wrap: wrap;
+}
+
+.camera-btn, .upload-btn {
+  padding: 15px 25px;
+  border: none;
+  border-radius: 25px;
+  background: #4ecdc4;
+  color: white;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  transition: all 0.3s ease;
+}
+
+.camera-btn:hover, .upload-btn:hover {
+  background: #45b7aa;
+  transform: translateY(-2px);
+}
+
+.camera-preview {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  margin: 20px 0;
+}
+
+.image-preview {
+  margin: 20px 0;
+}
+
+.crop-image, .captured-image {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 10px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+.analyze-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background: #ffa726;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 20px 0;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  justify-content: center;
+  transition: all 0.3s ease;
+}
+
+.analyze-btn:hover {
+  background: #ff9800;
+  transform: translateY(-2px);
+}
+
+.analyze-btn:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+.spinner {
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+/* Results */
+.diagnosis-result, .transcription-result {
+  background: rgba(255, 255, 255, 0.9);
+  color: #333;
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+.diagnosis-result h3, .transcription-result h4 {
+  margin-top: 0;
+  color: #2c3e50;
+}
+
+/* Market and Schemes Sections */
+.market-section, .schemes-section {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 15px;
+  padding: 30px;
+  backdrop-filter: blur(10px);
+}
+
+.action-btn {
+  padding: 15px 30px;
+  border: none;
+  border-radius: 25px;
+  background: #9c27b0;
+  color: white;
+  cursor: pointer;
+  font-size: 18px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.action-btn:hover {
+  background: #8e24aa;
+  transform: translateY(-2px);
+}
+
+/* API Status */
+.api-status {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: rgba(0, 0, 0, 0.7);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+/* Recording Status */
+.recording-status {
+  display: flex;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  gap: 10px;
+  margin: 10px 0;
+  color: #4ecdc4;
 }
 
-.App-link {
-  color: #61dafb;
+.pulse-indicator {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #4ecdc4;
+  animation: pulse 1.5s infinite;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+/* Responsive Design */
+@media (max-width: 768px) {
+  .App h1 {
+    font-size: 2em;
   }
-  to {
-    transform: rotate(360deg);
+  
+  .nav-tabs {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .tab-btn {
+    width: 200px;
+  }
+  
+  .recording-controls, .capture-options {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .record-btn, .camera-btn, .upload-btn, .analyze-btn, .action-btn {
+    width: 250px;
   }
 }
